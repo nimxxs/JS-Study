@@ -12,11 +12,15 @@ for (let i = 1; i <= 100; i+=2) {
 
 // 문제 3. 1부터 50까지 369 결과를 프린트하자.
 for (let i = 1; i <= 50; i++) {
-    if (i%3 != 0) {
-        console.log(i)
-    } else if (i%3 == 0) {
-        console.log("짝")
+    let result = i.toString()
+    let text = ''
+
+    for(let char of result) {
+        if(char === '3' || char === '6' || char === '9') {
+            text += "짝"
+        }
     }
+    console.log(text.length > 0 ? text : result)
 }
 
 // 문제 4. 주어진 숫자가 소수이면 true 아니면 false를 출력하는 프로그램을 짜시오.
